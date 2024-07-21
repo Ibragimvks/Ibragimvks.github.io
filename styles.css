@@ -9,7 +9,6 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 #background-slideshow {
@@ -24,7 +23,7 @@ body {
 #background-slideshow img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Обеспечивает полное покрытие экрана изображением */
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -37,13 +36,14 @@ body {
 }
 
 #timer {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
     color: #fff;
     font-size: 2em;
+    background: none; /* Убираем задний фон */
 }
 
 #message {
@@ -53,5 +53,5 @@ body {
     transform: translateX(-50%);
     z-index: 2;
     font-size: 1.5em;
-    color: #ff69b4; /* Розовый цвет */
+    color: #ff69b4;
 }
