@@ -4,66 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f7f7f7;
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-            height: 100vh;
-        }
-        #background-slideshow {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-        #background-slideshow img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            transition: opacity 1s;
-        }
-        #background-slideshow img.active {
-            opacity: 1;
-        }
-        #content {
-            position: relative;
-            z-index: 1;
-            color: #fff; /* Белый цвет текста для лучшей видимости на фоне */
-        }
-        #timer {
-            font-size: 2em;
-            margin-top: 20px;
-        }
-        #message {
-            font-size: 1.5em;
-            color: #ff69b4; /* Розовый цвет */
-            margin-bottom: 20px;
-        }
-        #controls {
-            margin-top: 20px;
-        }
-        .control-button {
-            background-color: #ff69b4;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            margin: 5px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="background-slideshow">
