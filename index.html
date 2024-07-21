@@ -15,15 +15,47 @@
             font-size: 2em;
             margin-top: 20px;
         }
+        #message {
+            font-size: 1.5em;
+            color: #ff69b4; /* розовый цвет */
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>Countdown Timer</h1>
+    <div id="message">Ты моя звезда!</div>
     <div id="timer"></div>
 
     <script>
         // Установите конечную дату и время
         const countdownDate = new Date("2024-07-27T10:00:00").getTime();
+
+        // Массив сообщений
+        const messages = [
+            "Ты моя звезда!",
+            "Ты делаешь меня счастливым!",
+            "Я люблю тебя больше всего на свете!",
+            "Ты – моё вдохновение!",
+            "Ты самая красивая!",
+            "Каждая секунда с тобой – это счастье!",
+            "Не могу дождаться твоего возвращения!",
+            "Ты так сильно мне нужна!",
+            "Скоро мы будем вместе!",
+            "Ты – лучшая часть моей жизни!",
+            "Скоро ты будешь дома!",
+            "Я скучаю по тебе каждый день!",
+            "Мир не тот без тебя рядом!",
+            "Ты приносишь в мою жизнь свет!",
+            "Я считаю дни до твоего возвращения!"
+        ];
+
+        // Функция для смены сообщений
+        let messageIndex = 0;
+        const changeMessage = () => {
+            document.getElementById("message").innerText = messages[messageIndex];
+            messageIndex = (messageIndex + 1) % messages.length;
+        };
+        setInterval(changeMessage, 5000); // смена сообщения каждые 5 секунд
 
         // Обновляйте таймер каждую секунду
         const countdownFunction = setInterval(function() {
@@ -39,7 +71,7 @@
 
             if (distance < 0) {
                 clearInterval(countdownFunction);
-                document.getElementById("timer").innerHTML = "EXPIRED";
+                document.getElementById("timer").innerHTML = "Время вышло!";
             }
         }, 1000);
     </script>
