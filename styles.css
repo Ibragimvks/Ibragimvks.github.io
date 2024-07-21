@@ -7,6 +7,9 @@ body {
     overflow: hidden;
     height: 100vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #background-slideshow {
@@ -35,28 +38,20 @@ body {
 
 #timer {
     position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+    font-size: 2em;
+}
+
+#message {
+    position: fixed;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 2em;
-}
-
-#content {
-    position: relative;
-    z-index: 1;
-    color: #fff;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-}
-
-#message {
     font-size: 1.5em;
     color: #ff69b4; /* Розовый цвет */
-    margin-bottom: 20px;
 }
